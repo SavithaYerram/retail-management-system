@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retail Management System</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Retail Management System</h1>
+
+      <section id="products-section">
+        <h2>Products</h2>
+        <form id="product-form">
+          <input
+            type="text"
+            id="product-name"
+            placeholder="Product Name"
+            required
+          />
+          <input
+            type="number"
+            id="product-price"
+            placeholder="Price"
+            required
+          />
+          <input
+            type="number"
+            id="product-stock"
+            placeholder="Stock"
+            required
+          />
+          <button type="submit">Add Product</button>
+        </form>
+        <ul id="product-list"></ul>
+      </section>
+
+      <section id="customers-section">
+        <h2>Customers</h2>
+        <form id="customer-form">
+          <input
+            type="text"
+            id="customer-name"
+            placeholder="Customer Name"
+            required
+          />
+          <button type="submit">Add Customer</button>
+        </form>
+        <ul id="customer-list"></ul>
+      </section>
+
+      <section id="orders-section">
+        <h2>Orders</h2>
+        <form id="order-form">
+          <select id="customer-select" required></select>
+          <select id="product-select" multiple required></select>
+          <button type="submit">Create Order</button>
+        </form>
+        <ul id="order-list"></ul>
+      </section>
+
+      <section id="promotions-section">
+        <h2>Promotions</h2>
+        <form id="promotion-form">
+          <select id="promotion-product" required></select>
+          <input
+            type="number"
+            id="promotion-discount"
+            placeholder="Discount %"
+            required
+          />
+          <input type="date" id="promotion-start" required />
+          <input type="date" id="promotion-end" required />
+          <button type="submit">Add Promotion</button>
+        </form>
+        <ul id="promotion-list"></ul>
+      </section>
+
+      <section id="reports-section">
+        <h2>Sales Report</h2>
+        <button id="generate-report">Generate Report</button>
+        <pre id="report-output"></pre>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
